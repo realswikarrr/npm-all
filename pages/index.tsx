@@ -8,15 +8,15 @@ import Content from '../components/content'
 
 const Home: NextPage = () => {
 
-  const {data, isLoading} = trpc.useQuery(["datas.getAll"]);
+  // const {data, isLoading} = trpc.useQuery(["datas.getAll"]);
   
-  if (isLoading || !data)
-  return (
-    <h1>loading....</h1>
-  );
+  // if (isLoading || !data)
+  // return (
+  //   <h1>loading....</h1>
+  // );
 
-  console.log(data[0]?.name);
-  console.log(data[0]?.nameNpm);
+  // console.log(data[0]?.name);
+  // console.log(data[0]?.nameNpm);
 
   return (
     <div >

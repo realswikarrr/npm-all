@@ -1,4 +1,4 @@
-import { Container, Center, Box ,useColorModeValue, Flex, Heading,Button, Text, SimpleGrid} from '@chakra-ui/react'
+import { Box ,useColorModeValue,Flex,Button, Text} from '@chakra-ui/react'
 import { AiOutlineRight } from "react-icons/ai";
 
 type Props = {
@@ -19,7 +19,7 @@ return (
         <Flex  alignItems="center" >
           <AiOutlineRight/> <Text ml={2}>{nameNPM}</Text>
         </Flex>
-        <Button>
+        <Button >
           Copy
         </Button>
     </Flex>
