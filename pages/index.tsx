@@ -3,8 +3,8 @@ import Head from 'next/head'
 import { trpc } from '../utils/trpc'
 import Image from 'next/image'
 import HomeImage from '../public/images/home.png'
-import { AiOutlineRight } from "react-icons/ai";
-import { Container, Center, Box ,useColorModeValue, Flex, Heading,Button, Text, SimpleGrid} from '@chakra-ui/react'
+import { Container, Center, Box ,useColorModeValue, SimpleGrid} from '@chakra-ui/react'
+import Content from '../components/content'
 
 const Home: NextPage = () => {
 
@@ -28,7 +28,7 @@ const Home: NextPage = () => {
 
       <Container>
         <Center mt={6}>
-          <Image src={HomeImage} />
+          <Image src={HomeImage} alt="Home Image" />
         </Center>
         <Box 
           borderRadius="lg"
@@ -44,40 +44,11 @@ const Home: NextPage = () => {
         </Container>
 
       <SimpleGrid columns={[1,1,2]} gap={6}>
-        <Box borderRadius="lg"
-          bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
-          p={1}
-          mt={6}
-          alignItems="center"
-          textAlign="center">
-          <Text mb={2} borderRadius="lg" bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}>Next JS</Text>
-          <Flex justifyContent='space-between' alignItems="center">
-              <Flex  alignItems="center" >
-                <AiOutlineRight/> <Text ml={2}>npm i typescript</Text>
-              </Flex>
-              <Button>
-                Copy
-              </Button>
-          </Flex>
-        </Box>
 
-        <Box borderRadius="lg"
-          bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
-          p={1}
-          mt={6}
-          alignItems="center"
-          textAlign="center">
-          <Text mb={2} borderRadius="lg" bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}>Next JS</Text>
-          <Flex justifyContent='space-between' alignItems="center">
-              <Flex  alignItems="center" >
-                <AiOutlineRight/> <Text ml={2}>npm i typescript</Text>
-              </Flex>
-              <Button>
-                Copy
-              </Button>
-          </Flex>
-        </Box>
-        </SimpleGrid>
+        <Content name="Next Js" nameNPM="npm i typescript" />
+        <Content name="Next Js" nameNPM="npm i typescript" />
+        
+      </SimpleGrid>
     
     </div>
   )
