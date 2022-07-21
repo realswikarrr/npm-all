@@ -24,12 +24,14 @@ const Main: React.FC<Props> = ({ children, router }) => {
         <meta property="og:site_name" content="Swikar Adhikari" />
         <meta name="og:title" content="Swikar Adhikari" />
         <meta property="og:type" content="website" />
+        
       </Head>
 
       <Navbar path={router.asPath} />
 
       <Container maxW="container.md" pt={14}>
         {children}
+        
       </Container>
     </Box>
   );

@@ -7,12 +7,15 @@ import Layout from "../components/layouts/main";
 import theme from "../lib/theme"
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
+import '../styles/globals.css'
+import Fonts from "../components/fonts";
 
 
 const MyApp: AppType = ({ Component, pageProps, router }) => {
   return (
     <ChakraProvider theme={theme}>
       <Layout router={router}>
+      <Fonts />
       <Component {...pageProps} key={router.route} />
       <ToastContainer
           position="top-center"
