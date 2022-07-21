@@ -1,6 +1,10 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { trpc } from '../utils/trpc'
+import Image from 'next/image'
+import HomeImage from '../public/images/home.png'
+import { AiOutlineRight } from "react-icons/ai";
+import { Container, Center, Box ,useColorModeValue, Flex, Heading,Button, Text, SimpleGrid} from '@chakra-ui/react'
 
 const Home: NextPage = () => {
 
@@ -22,9 +26,59 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main >
-        <h1>Hello</h1>
-      </main>
+      <Container>
+        <Center mt={6}>
+          <Image src={HomeImage} />
+        </Center>
+        <Box 
+          borderRadius="lg"
+          bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
+          mb={6}
+          p={3}
+          mt={6}
+          alignItems="center"
+          textAlign="center"
+        >
+          NPM Packages and Their Installion Commands
+        </Box>
+        </Container>
+
+      <SimpleGrid columns={[1,1,2]} gap={6}>
+        <Box borderRadius="lg"
+          bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
+          p={1}
+          mt={6}
+          alignItems="center"
+          textAlign="center">
+          <Text mb={2} borderRadius="lg" bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}>Next JS</Text>
+          <Flex justifyContent='space-between' alignItems="center">
+              <Flex  alignItems="center" >
+                <AiOutlineRight/> <Text ml={2}>npm i typescript</Text>
+              </Flex>
+              <Button>
+                Copy
+              </Button>
+          </Flex>
+        </Box>
+
+        <Box borderRadius="lg"
+          bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
+          p={1}
+          mt={6}
+          alignItems="center"
+          textAlign="center">
+          <Text mb={2} borderRadius="lg" bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}>Next JS</Text>
+          <Flex justifyContent='space-between' alignItems="center">
+              <Flex  alignItems="center" >
+                <AiOutlineRight/> <Text ml={2}>npm i typescript</Text>
+              </Flex>
+              <Button>
+                Copy
+              </Button>
+          </Flex>
+        </Box>
+        </SimpleGrid>
+    
     </div>
   )
 }
