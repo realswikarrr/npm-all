@@ -16,6 +16,6 @@
     "incremental": false,
     "noUncheckedIndexedAccess": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/navbar.js", "components/theme-toggle-button.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/navbar.js", "components/theme-toggle-button.tsx, "lib/theme.js""],
   "exclude": ["node_modules"]
 }
