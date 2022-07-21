@@ -5,12 +5,27 @@ import superjson from "superjson";
 import { ChakraProvider } from '@chakra-ui/react'
 import Layout from "../components/layouts/main";
 import theme from "../lib/theme"
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
+
 
 const MyApp: AppType = ({ Component, pageProps, router }) => {
   return (
     <ChakraProvider theme={theme}>
       <Layout router={router}>
       <Component {...pageProps} key={router.route} />
+      <ToastContainer
+          position="top-center"
+          autoClose={1000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          limit={3}
+      />
       </Layout>
     </ChakraProvider>
   );

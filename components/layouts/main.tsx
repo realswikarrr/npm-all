@@ -3,6 +3,7 @@ import { Box, Container } from "@chakra-ui/react";
 import Navbar from "../navbar";
 import { ReactNode } from "react";
 
+
 type Props = {
     children: ReactNode,
     router: any

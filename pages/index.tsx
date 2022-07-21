@@ -46,7 +46,7 @@ const Home: NextPage = () => {
       <SimpleGrid columns={[1,1,2]} gap={6}>
 
         <Content name="Next Js" nameNPM="npm i typescript" />
-        <Content name="Next Js" nameNPM="npm i typescript" />
+        <Content name="Next Js" nameNPM="npm i next" />
         
       </SimpleGrid>
     
