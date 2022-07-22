@@ -32,7 +32,7 @@ const Home: NextPage = () => {
           alignItems="center"
           textAlign="center"
         >
-          NPM Packages and Their Installion Commands
+          Easy Copy Paste npm Woof !!
         </Box>
         </Container>
 
