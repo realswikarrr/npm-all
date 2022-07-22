@@ -1,34 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## NPM All WebApp With t3 Stack
 
-## Getting Started
+![image](https://user-images.githubusercontent.com/80502023/180372129-eece9984-0195-4f9c-93cf-9909336b4d5d.png)
 
-First, run the development server:
+# What is this app all about ?
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+This is WebApp where there npm commands and you can easily copy paste the npm commands to anywhere you want. The data is dynamically fetched from the database using tRPC
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Why did i build this ?
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Because i am literally tired of copying and pasting commands from all over the internet so it will be very easy for me if i just have one place where i have all my commands so i don't need to go anywhere else for the commands.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+# Tech Stack Used ?
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+`` Next JS ``
+`` tRPC ``
+`` Planet Scale ``
+`` Prisma ``
+`` TypeScript ``
+`` Chakra UI ``
 
-## Learn More
+# Outcome 
 
-To learn more about Next.js, take a look at the following resources:
+I think t3 stack is easy to stack among other stack i developed applications with such as MERN. Specially tRPC makes our life so much easier for routing api's and all. All of our backend and frontend can be done within Next JS which is really good and i think i will be using this stack to build more application in future.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Usage 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+`` clone this repo ``
+` npm install `
+` npm run dev `
 
-## Deploy on Vercel
+Please star this repo if you end up using this project ⭐
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Further Improvement 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+I don't think i will be adding any changes to this app because i am out of idea for what to add any suggestions will be appreciated.
