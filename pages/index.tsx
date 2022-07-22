@@ -8,15 +8,8 @@ import Content from '../components/content'
 
 const Home: NextPage = () => {
 
-  // const {data, isLoading} = trpc.useQuery(["datas.getAll"]);
-  
-  // if (isLoading || !data)
-  // return (
-  //   <h1>loading....</h1>
-  // );
+  const { data, isLoading } = trpc.useQuery(["datas.getAll"]);
 
-  // console.log(data[0]?.name);
-  // console.log(data[0]?.nameNpm);
 
   return (
     <div >
@@ -43,12 +36,17 @@ const Home: NextPage = () => {
         </Box>
         </Container>
 
-      <SimpleGrid columns={[1,1,2]} gap={6}>
-
-        <Content name="Next Js" nameNPM="npm i typescript" />
-        <Content name="Next Js" nameNPM="npm i next" />
         
-      </SimpleGrid>
+
+       {isLoading || !data ? <div><h1>loadinggg</h1></div> : 
+        <SimpleGrid columns={[1,1,2]} gap={6}>
+          {data?.map((data) => {
+            return ( <Content key={data.name}  name={data.name} nameNPM={data?.nameNpm} /> )
+          })}
+        </SimpleGrid>
+       }
+
+   
     
     </div>
   )

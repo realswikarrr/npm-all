@@ -4,13 +4,15 @@ import { AiOutlineRight } from "react-icons/ai";
 import useClipboard from "react-use-clipboard";
 import {toast} from 'react-toastify'
 
-type Props = {
-    name: string,
-    nameNPM: string
+
+interface Props {
+  name: any;
+  nameNPM: any;
 }
 
 const Content: React.FC<Props> = ({name, nameNPM}) => {
   
+  console.log("Hello Iam here")
 
   const [isCopied, setCopied] = useClipboard(nameNPM);
 
