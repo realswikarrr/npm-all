@@ -5,6 +5,7 @@ import Image from 'next/image'
 import HomeImage from '../public/images/home.png'
 import { Container, Center, Box ,useColorModeValue, SimpleGrid} from '@chakra-ui/react'
 import Content from '../components/content'
+import { Spinner } from '@chakra-ui/react'
 
 const Home: NextPage = () => {
 
@@ -38,7 +39,7 @@ const Home: NextPage = () => {
 
         
 
-       {isLoading || !data ? <div><h1>loadinggg</h1></div> : 
+       {isLoading || !data ? <Center><Spinner  size="lg" /></Center> : 
         <SimpleGrid columns={[1,1,2]} gap={6}>
           {data?.map((data) => {
             return ( <Content key={data.name}  name={data.name} nameNPM={data?.nameNpm} /> )
