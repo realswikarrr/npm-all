@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { trpc } from '../utils/trpc'
 import Image from 'next/image'
 import HomeImage from '../public/images/home.png'
-import { Container, Center, Box ,useColorModeValue, SimpleGrid} from '@chakra-ui/react'
+import { Container, Center, Box ,useColorModeValue, SimpleGrid,Text} from '@chakra-ui/react'
 import Content from '../components/content'
 import { Spinner } from '@chakra-ui/react'
 
@@ -22,7 +22,7 @@ const Home: NextPage = () => {
 
       <Container>
         <Center mt={6}>
-          <Image src={HomeImage} alt="Home Image" />
+          <Image src={HomeImage} alt="Home Image" width={242} height={138} />
         </Center>
         <Box 
           borderRadius="lg"
@@ -33,11 +33,10 @@ const Home: NextPage = () => {
           alignItems="center"
           textAlign="center"
         >
-          Easy Copy Paste npm Woof !!
+          <Text>Easy Copy Paste npm Woof !!</Text>
         </Box>
         </Container>
 
-        
 
        {isLoading || !data ? <Center><Spinner  size="lg" /></Center> : 
         <SimpleGrid columns={[1,1,2]} gap={6}>

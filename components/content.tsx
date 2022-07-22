@@ -1,5 +1,4 @@
 import { Box ,useColorModeValue,Flex,Button, Text} from '@chakra-ui/react'
-import { useState } from 'react';
 import { AiOutlineRight } from "react-icons/ai";
 import useClipboard from "react-use-clipboard";
 import {toast} from 'react-toastify'
