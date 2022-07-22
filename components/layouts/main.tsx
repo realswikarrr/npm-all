@@ -2,6 +2,7 @@ import Head from "next/head";
 import { Box, Container } from "@chakra-ui/react";
 import Navbar from "../navbar";
 import { ReactNode } from "react";
+import Footer from "../footer";
 
 
 type Props = {
@@ -31,7 +32,7 @@ const Main: React.FC<Props> = ({ children, router }) => {
 
       <Container maxW="container.md" pt={14}>
         {children}
-        
+        <Footer />
       </Container>
     </Box>
   );
