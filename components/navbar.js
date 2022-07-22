@@ -16,6 +16,8 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import ThemeToggleButton from "./theme-toggle-button";
+import {IoLogoGithub} from "react-icons/io5"
+import {IoCreateOutline} from "react-icons/io5"
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href;
@@ -70,8 +72,29 @@ const Navbar = (props) => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
-           <LinkItem href="/request" path={path}>
-            Request 
+          <LinkItem
+            target="_blank"
+            href="https://github.com/realswikarrr/npm-all"
+            path={path}
+            display="inline-flex"
+            alignItems="center"
+            style={{ gap: 4 }}
+            pl={2}
+          >
+            <IoLogoGithub />
+            Source
+          </LinkItem>
+          <LinkItem
+            target="_blank"
+            href="https://discord.gg/EkAv7zfQk6"
+            path={path}
+            display="inline-flex"
+            alignItems="center"
+            style={{ gap: 4 }}
+            pl={2}
+          >
+            <IoCreateOutline />
+            Request
           </LinkItem>
         </Stack>
 
@@ -89,7 +112,19 @@ const Navbar = (props) => {
               <MenuList>
                 <NextLink href="/" passHref>
                   <MenuItem as={Link}>Home</MenuItem>
-                </NextLink>
+                </NextLink> 
+                <MenuItem
+                  as={Link}
+                  href="https://discord.gg/EkAv7zfQk6"
+                >
+                  Request
+                </MenuItem>
+                <MenuItem
+                  as={Link}
+                  href="https://github.com/realswikarrr/npm-all"
+                >
+                  View Source
+                </MenuItem>
               </MenuList>
             </Menu>
           </Box>
